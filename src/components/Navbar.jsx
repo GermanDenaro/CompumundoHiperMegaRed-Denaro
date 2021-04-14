@@ -1,4 +1,5 @@
 import React from 'react'
+import {Dropdown} from 'react-bootstrap'
 
 const Navbar = () => {
     return (
@@ -16,16 +17,17 @@ const Navbar = () => {
                             <li className="nav-item">
                                 <a className="nav-link" href="#">Contacto</a>
                             </li>   
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <Dropdown>
+                                <Dropdown.Toggle variant="warning" id="dropdown-basic">
                                     Productos
-                                </a>
-                                <ul className="dropdown-menu" aria-label="navbarDropdown">
-                                    <li><a className="dropdown-item" href="#">Action</a></li>
-                                    <li><a className="dropdown-item" href="#">Another action</a></li>
-                                    <li><a className="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="#/action-1">Consolas</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-1">Juegos de Consolas</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Computadoras Armadas</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
                         </ul>
                         <div>
                             <a className="navbar-brand" href="#">TecnoPRO</a>
