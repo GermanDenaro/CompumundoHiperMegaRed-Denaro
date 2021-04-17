@@ -1,5 +1,6 @@
 import React from 'react'
-import {Dropdown} from 'react-bootstrap'
+import {Dropdown, Button} from 'react-bootstrap'
+import logo from '../Images/logo.jpg'
 
 const Navbar = () => {
     return (
@@ -30,13 +31,14 @@ const Navbar = () => {
                             </Dropdown>
                         </ul>
                         <div>
-                            <a className="navbar-brand" href="#">TecnoPRO</a>
+                            <a className="navbar-brand ml-5" href="#">TecnoPRO</a>              
                         </div>
                         <form className="d-flex">
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                             <button className="btn btn-info" type="submit">Search</button>
                         </form>
                     </div>
+                    <Button variant="warning" className="material-icons md-24 ml-4">shopping_cart</Button>
                 </div>
             </nav>
         </>
