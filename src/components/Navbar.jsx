@@ -1,6 +1,5 @@
 import React from 'react'
 import {Dropdown, Button} from 'react-bootstrap'
-import logo from '../Images/logo.jpg'
 
 const Navbar = () => {
     return (
@@ -13,10 +12,10 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">                           
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Quienes somos?</a>
+                                <a className="nav-link" href="/">Quienes somos?</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Contacto</a>
+                                <a className="nav-link" href="/">Contacto</a>
                             </li>   
                             <Dropdown>
                                 <Dropdown.Toggle variant="warning" id="dropdown-basic">
@@ -31,7 +30,7 @@ const Navbar = () => {
                             </Dropdown>
                         </ul>
                         <div>
-                            <a className="navbar-brand ml-5" href="#">TecnoPRO</a>              
+                            <a className="navbar-brand ml-5" href="/">CompumundoHiperMegaRed</a>              
                         </div>
                         <form className="d-flex">
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />

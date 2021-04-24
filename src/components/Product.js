@@ -1,18 +1,19 @@
 const Products = [
     {
       id: 1,
-      name: "Producto 1",
-      stock: 20
+      name: "PlayStation V",
+      stock: 20,
+      image: 'https://i.blogs.es/6ec08f/xbox-series-x/1366_2000.jpg'
       
     },
     {
       id: 2,
-      name: "Produtto 2",
+      name: "Xbox Series X",
       stock: 0
     },
     {
       id: 3,
-      name: "Producto 3",
+      name: "Nintendo Switch",
       stock: 3
     },
     {
