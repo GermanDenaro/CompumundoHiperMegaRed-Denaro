@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Card, Button, Row, Col} from 'react-bootstrap'
-import Product from './Product'
+import products from '../data/product-data'
 
 const ItemCount = () => {
 
@@ -22,31 +22,32 @@ const ItemCount = () => {
 
 
     return (
-        <div>
-            <Card style={{ width: '18rem' }}>
-                <Card.Body>
-                    <Card.Title>Xbox Series X</Card.Title>
-                    <Card.Text>
-                    LA XBOX MÁS RÁPIDA Y MÁS POTENTE DE LA HISTORIA
-                    <hr/>
-                    </Card.Text>
-                    <Row>
-                        <Col xs={6} md={4}>
-                        <Button variant="primary" onClick={handleSub}>-</Button>
-                        </Col>
-                        <Col xs={6} md={4}>
-                        <input type="number" min="1" max={stock} className="text-center" value={contador} />
-                        </Col>
-                        <Col xs={6} md={4}>
-                        <Button className='float-right' variant="primary" onClick={handleAdd}>+</Button>
-                        </Col>
-                    </Row>
+        // <div>
+        //     <Card style={{ width: '18rem' }}>
+        //         <Card.Body>
+        //             <Card.Title>Xbox Series X</Card.Title>
+        //             <Card.Text>
+        //             LA XBOX MÁS RÁPIDA Y MÁS POTENTE DE LA HISTORIA
+        //             <hr/>
+        //             </Card.Text>
+        //             <Row>
+        //                 <Col xs={6} md={4}>
+        //                 <Button variant="primary" onClick={handleSub}>-</Button>
+        //                 </Col>
+        //                 <Col xs={6} md={4}>
+        //                 <input type="number" min="1" max={stock} className="text-center" value={contador} />
+        //                 </Col>
+        //                 <Col xs={6} md={4}>
+        //                 <Button className='float-right' variant="primary" onClick={handleAdd}>+</Button>
+        //                 </Col>
+        //             </Row>
                     
                         
                     
-                </Card.Body>
-            </Card> 
-        </div>
+        //         </Card.Body>
+        //     </Card> 
+        // </div>
+        <p></p>
     )
 }
 
