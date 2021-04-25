@@ -1,10 +1,25 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {Alert} from 'react-bootstrap'
 import ItemList from './ItemList'
+import products from '../data/product-data'
+import Spinner from './Spinner'
+
 
 
 
 const ItemListContainer = () => {
+
+  const [items, setItems] = useState([])
+
+  useEffect(() => {
+    new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(products);
+      }, 2000);
+    }).then((resultado) => setItems(resultado));
+  });
+
+
   return (
     <div>   
       <Alert variant="success">
@@ -13,7 +28,11 @@ const ItemListContainer = () => {
           En nuestra tienda podras encontrar todo lo que buscas! Y lo mejor, a un precio inimaginable!
         </p>
       </Alert>
-      <ItemList/>
+      {
+        items.length < 1 ? <Spinner/> : <ItemList items={items}/>
+      }
+      
+      
     </div>
   )
 }

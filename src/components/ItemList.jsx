@@ -1,18 +1,19 @@
 import React from 'react'
-import products from '../data/product-data'
+// import products from '../data/product-data'
 import Item from './Item'
 
-const ItemList = () => {
+const ItemList = (props) => {
     return (
+        
         <div className="container">
-            <div className='row justify-content-between'>
-                {
-                    products.map(item => (
-                        <Item key={item.id} item={item}/>
-                    ))
-                }
-            </div>
+                <div className='row justify-content-between'>
+                    {
+                        props.items.map(item => (
+                            <Item key={item.id} item={item}/>))
+                    }
+                </div>
         </div>
+        
     )
 }
 

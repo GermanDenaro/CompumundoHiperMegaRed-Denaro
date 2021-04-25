@@ -26,7 +26,7 @@ const products = [
     },
     {
       id: 4,
-      title: "Computadora Gamer",
+      title: "Computadora AMD",
       price: 250000,
       stock: 10,
       pictureUrl: 'https://http2.mlstatic.com/D_NQ_NP_875404-MLA43043078508_082020-O.webp',
@@ -34,7 +34,7 @@ const products = [
     },
     {
       id: 5,
-      title: "Computadora Gamer",
+      title: "Computadora Intel",
       price: 250000,
       stock: 10,
       pictureUrl: 'https://http2.mlstatic.com/D_NQ_NP_875404-MLA43043078508_082020-O.webp',
