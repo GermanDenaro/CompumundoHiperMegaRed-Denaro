@@ -1,5 +1,6 @@
 import React from 'react'
 import {Dropdown, Button} from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
@@ -23,9 +24,18 @@ const Navbar = () => {
                                 </Dropdown.Toggle>
 
                                 <Dropdown.Menu>
-                                    <Dropdown.Item href="#/action-1">Consolas</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-1">Juegos de Consolas</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Computadoras Armadas</Dropdown.Item>
+                                    <Link to='/category/all'>
+                                        <Dropdown.Item href="#/action-1">Todo</Dropdown.Item>
+                                    </Link>                              
+                                    <Link to='/category/consoles'>
+                                        <Dropdown.Item href="#/action-2">Consolas</Dropdown.Item>
+                                    </Link>
+                                    {/* <Link to='/category/consoles'>
+                                        <Dropdown.Item href="#/action-3">Juegos de Consolas</Dropdown.Item>
+                                    </Link> */}
+                                    <Link to='/category/pc'>
+                                        <Dropdown.Item href="#/action-4">Computadoras Armadas</Dropdown.Item>
+                                    </Link>
                                 </Dropdown.Menu>
                             </Dropdown>
                         </ul>

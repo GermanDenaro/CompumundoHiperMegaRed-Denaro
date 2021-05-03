@@ -5,7 +5,8 @@ const products = [
       price: 120000,
       stock: 20,
       pictureUrl: 'https://http2.mlstatic.com/D_NQ_NP_2X_944273-MLA44428921859_122020-F.webp',
-      description: 'La PS mas rápida y potente de la historia'
+      description: 'La PS mas rápida y potente de la historia',
+      category: 'consoles'
       
     },
     {
@@ -14,7 +15,8 @@ const products = [
       price: 110000,
       stock: 5,
       pictureUrl: 'https://http2.mlstatic.com/D_NQ_NP_2X_963862-MLA45041918050_032021-F.webp',
-      description: 'La XBOX mas rápida y potente de la historia'
+      description: 'La XBOX mas rápida y potente de la historia',
+      category: 'consoles'
     },
     {
       id: 3,
@@ -22,7 +24,8 @@ const products = [
       price: 60000,
       stock: 3,
       pictureUrl: 'https://http2.mlstatic.com/D_NQ_NP_2X_883371-MLA32731749246_112019-F.webp',
-      description: 'La SWITCH mas rápida y potente de la historia'
+      description: 'La SWITCH mas rápida y potente de la historia',
+      category: 'consoles'
     },
     {
       id: 4,
@@ -30,7 +33,8 @@ const products = [
       price: 250000,
       stock: 10,
       pictureUrl: 'https://http2.mlstatic.com/D_NQ_NP_875404-MLA43043078508_082020-O.webp',
-      description: 'Una computadora gamer, que mas se pude decir?'
+      description: 'Una computadora gamer, que mas se pude decir?',
+      category: 'pc'
     },
     {
       id: 5,
@@ -38,7 +42,8 @@ const products = [
       price: 250000,
       stock: 10,
       pictureUrl: 'https://http2.mlstatic.com/D_NQ_NP_875404-MLA43043078508_082020-O.webp',
-      description: 'Una computadora gamer, que mas se pude decir?'
+      description: 'Una computadora gamer, que mas se pude decir?',
+      category: 'pc'
     }
   ];
   

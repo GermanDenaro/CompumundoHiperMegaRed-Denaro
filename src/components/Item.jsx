@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {Card, Col, Button, Row} from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 
 const Item = (props) => {
 
@@ -22,7 +23,9 @@ const Item = (props) => {
         
         <div className='col-3 mb-3 d-flex'>        
             <Card>
-                <Card.Img style={{height: 180}} className='img-card' variant="top" src={props.item.pictureUrl} />
+                <Link to={`/item/${props.item.id}`}>
+                    <Card.Img style={{height: 180}} className='img-card' variant="top" src={props.item.pictureUrl} />
+                </Link>
                 <hr/>
                 <Card.Body>
                     <Card.Title>{props.item.title}</Card.Title>
