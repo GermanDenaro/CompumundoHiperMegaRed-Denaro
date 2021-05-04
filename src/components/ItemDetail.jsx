@@ -19,6 +19,7 @@ const ItemDetail = () => {
                 <Col>
                 <h1>{itemDetailed[0].title}</h1>
                 <p>{itemDetailed[0].description}</p>
+                <span>${itemDetailed[0].price}</span>
                 </Col> 
             </Row>          
         </div>
