@@ -22,32 +22,23 @@ const ItemCount = () => {
 
 
     return (
-        // <div>
-        //     <Card style={{ width: '18rem' }}>
-        //         <Card.Body>
-        //             <Card.Title>Xbox Series X</Card.Title>
-        //             <Card.Text>
-        //             LA XBOX MÁS RÁPIDA Y MÁS POTENTE DE LA HISTORIA
-        //             <hr/>
-        //             </Card.Text>
-        //             <Row>
-        //                 <Col xs={6} md={4}>
-        //                 <Button variant="primary" onClick={handleSub}>-</Button>
-        //                 </Col>
-        //                 <Col xs={6} md={4}>
-        //                 <input type="number" min="1" max={stock} className="text-center" value={contador} />
-        //                 </Col>
-        //                 <Col xs={6} md={4}>
-        //                 <Button className='float-right' variant="primary" onClick={handleAdd}>+</Button>
-        //                 </Col>
-        //             </Row>
-                    
-                        
-                    
-        //         </Card.Body>
-        //     </Card> 
-        // </div>
-        <p/>
+         <div>
+             <Card style={{ width: '18rem' }}>
+                 <Card.Body>
+                     <Row>
+                         <Col xs={6} md={4}>
+                         <Button variant="primary" onClick={handleSub}>-</Button>
+                         </Col>
+                         <Col xs={6} md={4}>
+                         <input type="number" min="1" max={stock} className="text-center" value={contador} />
+                         </Col>
+                         <Col xs={6} md={4}>
+                         <Button className='float-right' variant="primary" onClick={handleAdd}>+</Button>
+                         </Col>
+                     </Row>
+                 </Card.Body>
+             </Card> 
+         </div>
     )
 }
 

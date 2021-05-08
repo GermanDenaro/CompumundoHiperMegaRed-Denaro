@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router';
 import products from '../data/product-data'
 import {Image, Col, Row} from 'react-bootstrap'
+import ItemCount from './ItemCount';
 
 const ItemDetail = () => {
 
@@ -21,6 +22,7 @@ const ItemDetail = () => {
                 <p>{itemDetailed[0].description}</p>
                 <span>${itemDetailed[0].price}</span>
                 </Col> 
+                <ItemCount/>
             </Row>          
         </div>
     )
