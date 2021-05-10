@@ -23,8 +23,6 @@ const RouterApp = () => {
                         <ItemListContainer/>
                     </Route>
                 </Switch>
-            <Redirect to="/"/>        
-            <ItemCount/>
         </Router>
     )
 }

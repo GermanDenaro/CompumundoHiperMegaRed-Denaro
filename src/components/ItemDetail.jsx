@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router';
 import products from '../data/product-data'
 import {Image, Col, Row} from 'react-bootstrap'
 import ItemCount from './ItemCount';
 
+
+
+
 const ItemDetail = () => {
+
+    const [itemQty, setItemQty] = useState(0);
+
+    const onAdd = (qty) => {
+        console.log('Dentro de onadd');
+        setItemQty(qty)
+    }
+
+
 
     const {id} = useParams();
 
@@ -21,8 +33,8 @@ const ItemDetail = () => {
                 <h1>{itemDetailed[0].title}</h1>
                 <p>{itemDetailed[0].description}</p>
                 <span>${itemDetailed[0].price}</span>
+                <ItemCount stock={itemDetailed[0].stock} onAdd={onAdd} id={itemDetailed[0].id}/>
                 </Col> 
-                <ItemCount/>
             </Row>          
         </div>
     )
