@@ -1,9 +1,9 @@
 import React from 'react'
-import ItemCount from '../ItemCount'
 import ItemListContainer from '../ItemListContainer'
 import Navbar from '../Navbar'
-import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import ItemDetailContainer from '../ItemDetailContainer'
+import Cart from '../Cart'
 
 const RouterApp = () => {
     return (
@@ -19,6 +19,9 @@ const RouterApp = () => {
                     <Route path="/category/:id">
                         <ItemListContainer/>
                     </Route>   
+                    <Route path="/cart">
+                        <Cart/>
+                    </Route>
                     <Route path="/">
                         <ItemListContainer/>
                     </Route>

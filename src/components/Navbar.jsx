@@ -1,6 +1,7 @@
 import React from 'react'
-import {Dropdown, Button} from 'react-bootstrap'
+import {Dropdown} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import CartWidget from './CartWidget'
 
 const Navbar = () => {
     return (
@@ -46,9 +47,9 @@ const Navbar = () => {
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                             <button className="btn btn-info" type="submit">Search</button>
                         </form>
-                    </div>
-                    <Button variant="warning" className="material-icons md-24 ml-4">shopping_cart</Button>
-                </div>
+                    </div>   
+                        <CartWidget/>
+                </div>             
             </nav>
         </>
     )
