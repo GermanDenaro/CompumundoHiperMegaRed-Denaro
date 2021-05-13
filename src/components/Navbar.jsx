@@ -41,7 +41,7 @@ const Navbar = () => {
                             </Dropdown>
                         </ul>
                         <div>
-                            <a className="navbar-brand ml-5" href="/">CompumundoHiperMegaRed</a>              
+                            <Link to='/'><a className="navbar-brand ml-5">CompumundoHiperMegaRed</a></Link>              
                         </div>
                         <form className="d-flex">
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
