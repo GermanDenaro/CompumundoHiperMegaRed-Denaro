@@ -44,8 +44,8 @@ const ItemCount = (props) => {
                          </Col>
                          <Col xs={6} md={4}>
                          <Button className='float-right' variant="primary" onClick={handleAdd}>+</Button>
-                         </Col>
-                         <Button className="btn btn-dark mt-3" onClick={()=> {finalizarTrue(); props.onAdd(contador); context.addItem(props.id, contador)}}>Agregar al Carrito</Button>
+                         </Col>                                                                                                         
+                         <Button className="btn btn-dark mt-3" onClick={()=> {finalizarTrue(); props.onAdd(contador); context.addItem(props.id, contador, props.price, props.title, props.pictureUrl)}}>Agregar al Carrito</Button>
                         <Link to='/cart'><Button className={`btn btn-dark mt-3 ${!finalizar ? "d-none" : ""}`}>Finalizar Compra</Button></Link>
                      </Row>
                  </Card.Body>

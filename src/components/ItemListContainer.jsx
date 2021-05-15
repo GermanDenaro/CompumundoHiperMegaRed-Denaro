@@ -26,7 +26,7 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     setItems([]);
-    new Promise((resolve, reject) => {
+    new Promise((resolve) => {
       setTimeout(() => {
         resolve(products);
       }, 2000);

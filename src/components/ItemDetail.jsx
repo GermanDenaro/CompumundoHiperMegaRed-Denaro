@@ -33,7 +33,7 @@ const ItemDetail = () => {
                 <h1>{itemDetailed[0].title}</h1>
                 <p>{itemDetailed[0].description}</p>
                 <span>${itemDetailed[0].price}</span>
-                <ItemCount stock={itemDetailed[0].stock} onAdd={onAdd} id={itemDetailed[0].id}/>
+                <ItemCount stock={itemDetailed[0].stock} onAdd={onAdd} id={itemDetailed[0].id} price={itemDetailed[0].price} title={itemDetailed[0].title} pictureUrl={itemDetailed[0].pictureUrl}/>
                 </Col> 
             </Row>          
         </div>

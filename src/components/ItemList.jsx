@@ -1,5 +1,4 @@
 import React from 'react'
-// import products from '../data/product-data'
 import Item from './Item'
 
 const ItemList = (props) => {
