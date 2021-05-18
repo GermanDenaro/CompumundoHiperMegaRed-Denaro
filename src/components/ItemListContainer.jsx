@@ -29,7 +29,7 @@ const ItemListContainer = () => {
   useEffect(() => {
     if(id !== undefined) {
       setCategory(id);
-      console.log('La categorua es: ', category);
+      console.log('La categora es: ', category);
     }
   }, [id]);
   

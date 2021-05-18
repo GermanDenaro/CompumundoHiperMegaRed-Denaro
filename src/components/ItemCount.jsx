@@ -40,7 +40,7 @@ const ItemCount = (props) => {
                          <Button variant="primary" onClick={handleSub}>-</Button>
                          </Col>
                          <Col xs={6} md={4}>
-                         <input type="number" min="1" max={props.stock} className="text-center" value={contador} />
+                            <input type="number" min="1" max={props.stock} className="text-center w-100" value={contador} />
                          </Col>
                          <Col xs={6} md={4}>
                          <Button className='float-right' variant="primary" onClick={handleAdd}>+</Button>

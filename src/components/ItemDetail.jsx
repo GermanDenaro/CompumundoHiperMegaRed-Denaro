@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
-// import products from '../data/product-data'
+import { useParams } from 'react-router';
+import products from '../data/product-data'
 import {Image, Col, Row} from 'react-bootstrap'
 import ItemCount from './ItemCount';
 
 
 
 
-const ItemDetail = ({items: {id, title, price, pictureUrl, description, stock}}) => {
+const ItemDetail = ({ items }) => {
 
     const [itemQty, setItemQty] = useState(0);
-    
 
     const onAdd = (qty) => {
         console.log('Dentro de onadd');
@@ -18,22 +18,22 @@ const ItemDetail = ({items: {id, title, price, pictureUrl, description, stock}})
 
 
 
-    // const {id} = useParams();
+    const {id} = useParams();
 
-    // const itemDetailed = items.filter(item => item.id == id)
+    // const itemDetailed = products.filter(item => item.id == id)
     // console.log(itemDetailed);
 
     return (
         <div className='container mt-5'>
             <Row>   
                 <Col className='mr-2'>      
-                <Image width={500} src={pictureUrl} fluid />
+                <Image width={500} src={items.pictureUrl} fluid />
                 </Col>
                 <Col>
-                <h1>{title}</h1>
-                <p>{description}</p>
-                <span>${price}</span>
-                <ItemCount stock={stock} onAdd={onAdd} id={id} price={price} title={title} pictureUrl={pictureUrl}/>
+                <h1>{items.title}</h1>
+                <p>{items.description}</p>
+                <span>${items.price}</span>
+                <ItemCount items={items} onAdd={onAdd} />
                 </Col> 
             </Row>          
         </div>

@@ -13,15 +13,16 @@ const Item = (props) => {
      }
  }
 
- const handleSub = () => {
-     if(contador > 1) {
+    const handleSub = () => {
+        if(contador > 1) {
          setContador(contador - 1)
      }
  }
 
+
     return (
         
-        <div className='col-3 mb-3 d-flex'>        
+        <div className='col-3 mb-3 d-flex' key={props.item.id}>        
             <Card>
                 <Link to={`/item/${props.item.id}`}>
                     <Card.Img style={{height: 180}} className='img-card' variant="top" src={props.item.pictureUrl} />

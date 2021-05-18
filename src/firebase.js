@@ -2,7 +2,7 @@ import firebase from 'firebase';
 import 'firebase/firestore';
 
 
-const app = firebase.initializeApp({
+const configFirebase = firebase.initializeApp({
     apiKey: "AIzaSyCA9n0RQwM2nsiSVVQoRPgQgpnlG1SQ6yk",
     authDomain: "compumundohipermegared-64e48.firebaseapp.com",
     projectId: "compumundohipermegared-64e48",
@@ -11,6 +11,10 @@ const app = firebase.initializeApp({
     appId: "1:819925515063:web:1e72d596d5a10fcfbf38b2"
   });
 
-  export const getFirebase = () => app;
+  export function getFirebase() {
+    return configFirebase;
+}
 
-  export const getFirestore = () => firebase.firestore(app);
+export function getFirestore() {
+    return firebase.firestore(configFirebase);
+}

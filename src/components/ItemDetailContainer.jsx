@@ -6,17 +6,17 @@ import { getFirestore } from '../firebase'
 const ItemDetailContainer = () => {
 
     const {id} = useParams();
+    const [db, setDb] = useState(getFirestore())
     const [itemDetailedById, setItemDetailedById] = useState([]);
 
     // firebase
-    useEffect(() => {
-        const db = getFirestore();
-        const productos = db.collection('items').doc(id);
+     useEffect(() => {
+         const productos = db.collection('items').doc(id);
 
-        productos.get().then((res) => {
-            setItemDetailedById({ id, ...res.data() });
-        });
-    }, [id]);
+         productos.get().then((res) => {
+             setItemDetailedById({ id, ...res.data() });
+         });
+     }, [id]);
 
 
     return (
