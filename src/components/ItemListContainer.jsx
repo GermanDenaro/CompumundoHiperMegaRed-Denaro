@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import {Alert} from 'react-bootstrap'
 import ItemList from './ItemList'
-import products from '../data/product-data'
 import Spinner from './Spinner'
 import { useParams } from 'react-router'
+import { getFirestore } from '../firebase'
 
 
 
@@ -15,6 +15,17 @@ const ItemListContainer = () => {
   const [items, setItems] = useState([]);
   const [category, setCategory] = useState('all');
 
+   useEffect(() => {
+     const db = getFirestore();
+     const itemCollection = db.collection('items');
+     itemCollection.get()
+         .then((querySnapshot) => {                
+             setItems(querySnapshot.docs.map((doc) => doc.data()))
+         })
+         .catch((error) => console.error('Firestore error:', error))
+ }, [])
+
+
   useEffect(() => {
     if(id !== undefined) {
       setCategory(id);
@@ -22,16 +33,6 @@ const ItemListContainer = () => {
     }
   }, [id]);
   
-
-
-  useEffect(() => {
-    setItems([]);
-    new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(products);
-      }, 2000);
-    }).then((resultado) => category === 'all' ? setItems(resultado):(setItems(resultado.filter(item => item.category == category))))
-  }, [category]);
 
 
   return (

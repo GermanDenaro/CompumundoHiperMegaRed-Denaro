@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import {CartContext} from '../context/CartContext'
-import { Button } from 'react-bootstrap'
+import { Button, Image } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 
@@ -24,8 +24,8 @@ const Cart = () => {
                     {
                         context.cart.map(item => (
                         <div>
-                            <p>{item.pictureUrl}</p>       
-                            <p>Titulo: {item.title}</p>       
+                            <Image width={100} src={item.pictureUrl} fluid />       
+                            <p>{item.title}</p>       
                             <p>Cantidad: {item.quantity}</p>   
                             <Button className="btn btn-info" type="submit" onClick={()=> context.removeItem(item.id)}>Eliminar</Button>  
                             <hr/>                    
