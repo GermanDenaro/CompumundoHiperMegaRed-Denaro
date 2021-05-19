@@ -4,6 +4,7 @@ import Navbar from '../Navbar'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import ItemDetailContainer from '../ItemDetailContainer'
 import Cart from '../Cart'
+import Checkout from '../Checkout/Checkout'
 
 const RouterApp = () => {
     return (
@@ -21,6 +22,9 @@ const RouterApp = () => {
                     </Route>   
                     <Route path="/cart">
                         <Cart/>
+                    </Route>
+                    <Route path="/checkout">
+                        <Checkout/>
                     </Route>
                     <Route path="/">
                         <ItemListContainer/>

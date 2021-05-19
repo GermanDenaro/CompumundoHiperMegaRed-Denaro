@@ -35,6 +35,7 @@ const Cart = () => {
                         <div>
                             <p>Total de items: {context.cartItems}</p>
                             <p>Precio total: ${context.cartTotal}</p>
+                            <Link to='/checkout'><Button className="btn btn-info" type="submit" >Ir al Checkout</Button></Link>
                         </div>
                 </div>                                          
             } 

@@ -2,6 +2,7 @@ import React from 'react'
 import {Card} from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 
+
 const Item = ({item}) => {
 
     return (
@@ -15,7 +16,7 @@ const Item = ({item}) => {
                 <Card.Body  className='text-center'>
                     <Card.Title>{item.title}</Card.Title>
                     <Card.Text>
-                    <p>{item.description}</p>
+                    <p className='product-desc'>{item.description}</p>
                     <br/>
                     <hr/>
                     <strong className="justify-content-center">${item.price}</strong>
