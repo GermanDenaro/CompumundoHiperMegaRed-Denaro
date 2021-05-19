@@ -5,7 +5,7 @@ import {CartContext} from '../context/CartContext'
 
 
 
-const ItemCount = (props) => {
+const ItemCount = ({items, onAdd}) => {
 
  const context = useContext(CartContext);
 
@@ -14,7 +14,7 @@ const ItemCount = (props) => {
  const [contador, setContador] = useState(1);
 
  const handleAdd = () => {
-     if(contador < props.stock) {
+     if(contador < items.stock) {
          setContador(contador + 1)
      }
  }
@@ -40,12 +40,12 @@ const ItemCount = (props) => {
                          <Button variant="primary" onClick={handleSub}>-</Button>
                          </Col>
                          <Col xs={6} md={4}>
-                            <input type="number" min="1" max={props.stock} className="text-center w-100" value={contador} />
+                            <input type="number" min="1" max={items.stock} className="text-center w-100" value={contador}/>
                          </Col>
                          <Col xs={6} md={4}>
                          <Button className='float-right' variant="primary" onClick={handleAdd}>+</Button>
                          </Col>                                                                                                         
-                         <Button className="btn btn-dark mt-3" onClick={()=> {finalizarTrue(); props.onAdd(contador); context.addItem(props.id, contador, props.price, props.title, props.pictureUrl)}}>Agregar al Carrito</Button>
+                         <Button className="btn btn-dark mt-3" onClick={()=> {finalizarTrue(); onAdd(contador); context.addItem(items.id, contador, items.price, items.title, items.pictureUrl)}}>Agregar al Carrito</Button>
                         <Link to='/cart'><Button className={`btn btn-dark mt-3 ${!finalizar ? "d-none" : ""}`}>Finalizar Compra</Button></Link>
                      </Row>
                  </Card.Body>

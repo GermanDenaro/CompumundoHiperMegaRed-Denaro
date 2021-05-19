@@ -11,28 +11,22 @@ import { getFirestore } from '../firebase'
 const ItemListContainer = () => {
 
   const {id} = useParams();
-  console.log('El id es: ', id);
+  // console.log('El id es: ', id);
   const [items, setItems] = useState([]);
-  const [category, setCategory] = useState('all');
+  
 
    useEffect(() => {
      const db = getFirestore();
      const itemCollection = db.collection('items');
      itemCollection.get()
-         .then((querySnapshot) => {                
-             setItems(querySnapshot.docs.map((doc) => doc.data()))
+         .then((querySnapshot) => {            
+          let arr = []
+          querySnapshot.docs.map((c) => arr.push({ id: parseInt(c.id), ...c.data() }));
+          setItems(arr)    
          })
          .catch((error) => console.error('Firestore error:', error))
  }, [])
 
-
-  useEffect(() => {
-    if(id !== undefined) {
-      setCategory(id);
-      console.log('La categora es: ', category);
-    }
-  }, [id]);
-  
 
 
   return (

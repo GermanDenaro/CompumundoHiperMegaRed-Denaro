@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router';
-import products from '../data/product-data'
 import {Image, Col, Row} from 'react-bootstrap'
 import ItemCount from './ItemCount';
 

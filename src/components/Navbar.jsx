@@ -31,9 +31,6 @@ const Navbar = () => {
                                     <Link to='/category/consoles'>
                                         <Dropdown.Item href="#/action-2">Consolas</Dropdown.Item>
                                     </Link>
-                                    {/* <Link to='/category/consoles'>
-                                        <Dropdown.Item href="#/action-3">Juegos de Consolas</Dropdown.Item>
-                                    </Link> */}
                                     <Link to='/category/pc'>
                                         <Dropdown.Item href="#/action-4">Computadoras Armadas</Dropdown.Item>
                                     </Link>

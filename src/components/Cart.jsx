@@ -23,7 +23,7 @@ const Cart = () => {
                 <div>
                     {
                         context.cart.map(item => (
-                        <div key={item.id}>
+                        <div>
                             <Image width={100} src={item.pictureUrl} fluid />       
                             <p>{item.title}</p>       
                             <p>Cantidad: {item.quantity}</p>   
