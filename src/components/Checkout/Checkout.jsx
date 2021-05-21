@@ -11,13 +11,16 @@ import Typography from '@material-ui/core/Typography';
 import AddressForm from './AddressForm';
 import PaymentForm from './PaymentForm';
 import Review from './Review';
+import { getFirestore } from '../../firebase';
+import 'firebase/firestore';
+import * as firebase from 'firebase/app';
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+        CompuMundoHyperMegaRed
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -62,7 +65,25 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const steps = ['Shipping address', 'Payment details', 'Review your order'];
+const db = getFirestore();
+
+const orders = db.collection('orders');
+const newOrder = {
+  buyer: {
+    name,
+    phone,
+    email
+  },
+  items: [{
+    id,
+    title,
+    price
+  }],
+    date: firebase.firestore.Timestamp.fromDate(new Date()),
+    total
+}
+
+const steps = ['Dirección de envío', 'Detalles de pago', 'Revisión de la orden'];
 
 function getStepContent(step) {
   switch (step) {
@@ -108,11 +129,10 @@ export default function Checkout() {
             {activeStep === steps.length ? (
               <Fragment>
                 <Typography variant="h5" gutterBottom>
-                  Thank you for your order.
+                  Gracias por su compra.
                 </Typography>
                 <Typography variant="subtitle1">
-                  Your order number is #2001539. We have emailed your order confirmation, and will
-                  send you an update when your order has shipped.
+                  Su número de orden es #2001539. Se le pedirá este numero en caso de que suceda alguna eventualidad.
                 </Typography>
               </Fragment>
             ) : (
@@ -121,7 +141,7 @@ export default function Checkout() {
                 <div className={classes.buttons}>
                   {activeStep !== 0 && (
                     <Button onClick={handleBack} className={classes.button}>
-                      Back
+                      Atras
                     </Button>
                   )}
                   <Button
@@ -130,14 +150,14 @@ export default function Checkout() {
                     onClick={handleNext}
                     className={classes.button}
                   >
-                    {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
+                    {activeStep === steps.length - 1 ? 'Confirmar Compra' : 'Siguiente'}
                   </Button>
                 </div>
               </Fragment>
             )}
           </Fragment>
         </Paper>
-        <Copyright />
+        <Copyright/>
       </main>
     </Fragment>
   );
