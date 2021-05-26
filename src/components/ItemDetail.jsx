@@ -23,12 +23,12 @@ const ItemDetail = ({ items }) => {
     // console.log(itemDetailed);
 
     return (
-        <div className='container mt-5'>
+        <div className='container mt-5 animate__animated animate__fadeIn'>
             <Row>   
-                <Col className='mr-2'>      
-                <Image width={500} src={items.pictureUrl} fluid />
+                <Col className='mr-2 animate__animated animate__fadeInLeft animate__faster'>      
+                <Image width={500} src={items.pictureUrl} fluid  />
                 </Col>
-                <Col>
+                <Col className='animate__animated animate__fadeInRight animate__faster'>
                 <h1>{items.title}</h1>
                 <p>{items.description}</p>
                 <span>${items.price}</span>
