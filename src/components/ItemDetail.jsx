@@ -26,7 +26,7 @@ const ItemDetail = ({ items }) => {
         <div className='container mt-5 animate__animated animate__fadeIn'>
             <Row>   
                 <Col className='mr-2 animate__animated animate__fadeInLeft animate__faster'>      
-                <Image width={500} src={items.pictureUrl} fluid  />
+                <Image width={500} src={items.pictureUrl} fluid  className='imageDetail'/>
                 </Col>
                 <Col className='animate__animated animate__fadeInRight animate__faster'>
                 <h1>{items.title}</h1>

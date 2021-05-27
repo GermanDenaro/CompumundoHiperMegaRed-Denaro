@@ -1,10 +1,11 @@
 import React from 'react'
-import ItemListContainer from '../ItemListContainer'
-import Navbar from '../Navbar'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import Navbar from '../Navbar'
+import ItemListContainer from '../ItemListContainer'
 import ItemDetailContainer from '../ItemDetailContainer'
 import Cart from '../Cart'
 import Checkout from '../Checkout/Checkout'
+import Footer from '../Footer'
 
 const RouterApp = () => {
     return (
@@ -30,6 +31,7 @@ const RouterApp = () => {
                         <ItemListContainer/>
                     </Route>
                 </Switch>
+            <Footer/>
         </Router>
     )
 }

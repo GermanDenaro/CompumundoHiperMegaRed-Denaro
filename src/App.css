@@ -16,3 +16,26 @@ input.form-control:focus {
 label {
   font-size: 0.7rem;
 }
+
+.card-item:hover {
+  text-decoration: none;
+}
+
+/* ITEM DETAIL */
+
+.imageDetail {
+  box-shadow: 10px 10px 18px 7px rgba(0, 0, 0, 0.75);
+}
+.card-body {
+  color: black;
+  text-decoration: none;
+}
+
+/* ITEM */
+
+/* FOOTER */
+
+.footer {
+  background-color: rgba(71, 68, 68, 0.9);
+  color: white;
+}

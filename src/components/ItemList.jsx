@@ -26,7 +26,7 @@ const ItemList = ({items}) => {
     return (
         
         <div className="container">
-                <div className='row justify-content-between'>
+                <div className='row'>
                     {
                         catItems.map(item => (
                             <Item key={item.id} item={item} category={category}/>))
