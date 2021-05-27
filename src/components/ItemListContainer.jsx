@@ -38,7 +38,7 @@ const ItemListContainer = () => {
         </p>
       </Alert>
       {
-        items.length < 1 ? <Spinner/> : <ItemList items={items}/>
+        items.length < 1 ? <Spinner/> : <ItemList className='img-container' items={items}/>
       }
       
       

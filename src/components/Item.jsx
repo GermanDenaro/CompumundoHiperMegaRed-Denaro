@@ -7,7 +7,7 @@ const Item = ({item}) => {
 
     return (
         
-        <div className='col-3 mb-3 d-flex animate__animated animate__fadeIn item' key={item.id}>        
+        <div className='container-card col-3 mb-3 d-flex animate__animated animate__fadeIn item' key={item.id}>        
             <Card className='card-item'>
                 <Link to={`/item/${item.id}`}>
                     <Card.Img style={{height: 180}} className='img-card' variant="top" src={item.pictureUrl} />

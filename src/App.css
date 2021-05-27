@@ -17,18 +17,17 @@ label {
   font-size: 0.7rem;
 }
 
-.card-item:hover {
-  text-decoration: none;
-}
+/* ITEM CONTAINER */
 
+.container-card .card-item:hover {
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
 /* ITEM DETAIL */
 
-.imageDetail {
-  box-shadow: 10px 10px 18px 7px rgba(0, 0, 0, 0.75);
-}
 .card-body {
   color: black;
-  text-decoration: none;
 }
 
 /* ITEM */
@@ -38,4 +37,13 @@ label {
 .footer {
   background-color: rgba(71, 68, 68, 0.9);
   color: white;
+}
+
+/* ICONS */
+
+.add-icon {
+  color: black;
+}
+.add-icon:hover {
+  cursor: pointer;
 }
