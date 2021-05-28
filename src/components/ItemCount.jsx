@@ -1,9 +1,10 @@
 import React, {useContext, useState} from 'react'
-import {Card, Button, Row, Col} from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import {CartContext} from '../context/CartContext'
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import RemoveCircleOutlineIcon from '@material-ui/icons/RemoveCircleOutline'
+import Spinner from './Spinner';
 
 
 
@@ -34,28 +35,28 @@ const ItemCount = ({items, onAdd}) => {
  
 
     return (
-         <div>
-             <Card style={{ width: '18rem' }}>
-                 <Card.Body>
-                     <Row>                        
-                         <Col xs={6} md={4}>
-                         <RemoveCircleOutlineIcon className='remove-icon' fontSize='large'/>
-                         <Button variant="primary" onClick={handleSub}>-</Button>
-                         </Col>
-                         <Col xs={6} md={4}>
-                            <input type="number" min="1" max={items.stock} className="text-center w-100" value={contador}/>
-                         </Col>
-                         <Col xs={6} md={4}>
-                         {/* <Button className='float-right' variant="primary" onClick={handleAdd}>+</Button> */}
-                            <AddCircleOutlineIcon className='add-icon' fontSize='large' onClick={handleAdd}/>                    
-                         </Col>                                                                                                         
-                     </Row>
-                 </Card.Body>
-             </Card> 
-             <Button className="btn btn-dark mt-3" onClick={()=> {finalizarTrue(); onAdd(contador); context.addItem(items.id, contador, items.price, items.title, items.pictureUrl)}}>Agregar al Carrito</Button>
-             <Link to='/cart'><Button className={`btn btn-dark mt-3 ${!finalizar ? "d-none" : ""}`}>Finalizar Compra</Button></Link>
-         </div>
+        <div>
+        {
+            items.length === '0' ? <Spinner/>
+            :
+            (
+                <div className="container mt-3">
+                <div className='text-center float-right'>
+                    <RemoveCircleOutlineIcon className='remove-icon' fontSize='large' onClick={handleSub}/>      
+                    <input type="number" min="1" max={items.stock} className="text-center  stock-input" value={contador}/>       
+                    <AddCircleOutlineIcon className='add-icon mr-5' fontSize='large' onClick={handleAdd}/>    
+                    <Button className="btn btn-dark float-right" onClick={()=> {finalizarTrue(); onAdd(contador); context.addItem(items.id, contador, items.price, items.title, items.pictureUrl)}}>Agregar al Carrito</Button>                               
+                </div>   
+                <div className='pt-5 text-center'>
+                    <Link to='/cart'><Button className={`btn btn-dark mt-3 ${!finalizar ? "d-none" : ""}`}>Finalizar Compra</Button></Link> 
+                </div>               
+            </div>
+            )
+        }
+            
+        </div>
     )
 }
+ 
 
 export default ItemCount

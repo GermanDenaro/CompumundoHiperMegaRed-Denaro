@@ -25,7 +25,7 @@ const ItemList = ({items}) => {
 
     return (
         
-        <div className="container">
+        <div className="container bg-light py-4 px-4 rounded-top rounded-lg">
                 <div className='row'>
                     {
                         catItems.map(item => (

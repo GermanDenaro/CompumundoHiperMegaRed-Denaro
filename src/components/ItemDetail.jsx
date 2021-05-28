@@ -6,6 +6,7 @@ import ItemCount from './ItemCount';
 
 
 
+
 const ItemDetail = ({ items }) => {
 
     const [itemQty, setItemQty] = useState(0);
@@ -25,14 +26,14 @@ const ItemDetail = ({ items }) => {
     return (
         <div className='container mt-5 animate__animated animate__fadeIn'>
             <Row>   
-                <Col className='mr-2 animate__animated animate__fadeInLeft animate__faster'>      
-                <Image width={500} src={items.pictureUrl} fluid  className='imageDetail'/>
+                <Col md={7}className='mr-2 animate__animated animate__fadeInLeft animate__faster text-center'>      
+                    <Image src={items.pictureUrl} fluid  className='image-detail'/>
                 </Col>
-                <Col className='animate__animated animate__fadeInRight animate__faster'>
-                <h1>{items.title}</h1>
-                <p>{items.description}</p>
-                <span>${items.price}</span>
-                <ItemCount items={items} onAdd={onAdd} />
+                <Col className='animate__animated animate__fadeInRight animate__faster bg-light mb-3 rounded-lg'>
+                    <h1 className='text-center mt-3'>{items.title}</h1>
+                    <p className='text-center'>{items.description}</p>
+                    <p className='text-center'>${items.price}</p>
+                    <ItemCount items={items} onAdd={onAdd} />
                 </Col> 
             </Row>          
         </div>
