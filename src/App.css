@@ -95,6 +95,23 @@ label {
   max-width: 500px;
   max-height: 495px;
 }
+
+.item-price {
+  font-size: 2rem;
+}
+
+.spec-title {
+  text-decoration: underline;
+}
+
+.spec-text {
+  line-height: 13px;
+  font-weight: bold;
+}
+
+.spec-bg {
+  background-color: rgba(0, 125, 0, 0.247);
+}
 /* ITEM */
 
 /* FOOTER */
@@ -121,6 +138,7 @@ label {
 
 .dollar-icon {
   color: green;
+  margin-bottom: 0.3rem;
 }
 
 /* INPUTS */
