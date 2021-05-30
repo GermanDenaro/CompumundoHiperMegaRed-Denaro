@@ -21,7 +21,7 @@ const ItemDetailContainer = () => {
 
     return (
               
-                <ItemDetail items={itemDetailedById}/>
+                <ItemDetail item={itemDetailedById}/>
             
     )
 }

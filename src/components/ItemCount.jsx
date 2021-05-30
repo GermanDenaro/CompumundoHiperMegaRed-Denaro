@@ -8,6 +8,8 @@ import Spinner from './Spinner';
 
 
 
+
+
 const ItemCount = ({items, onAdd}) => {
 
  const context = useContext(CartContext);
@@ -49,6 +51,7 @@ const ItemCount = ({items, onAdd}) => {
                 </div>   
                 <div className='pt-5 text-center'>
                     <Link to='/cart'><Button className={`btn btn-dark mt-3 ${!finalizar ? "d-none" : ""}`}>Finalizar Compra</Button></Link> 
+                    <Link to='/'><Button className="btn btn-info mt-3 ml-4 text-center" type="submit">Volver</Button></Link>
                 </div>               
             </div>
             )

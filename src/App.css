@@ -35,8 +35,8 @@ label {
   border: 50px solid transparent;
   border-bottom-color: #595656;
   animation: rotateA 2s linear infinite 0.5s;
-  margin-top: 13rem;
-  margin-left: 36.5rem;
+  margin-top: 20rem;
+  margin-left: 51rem;
 }
 
 .kinetic::before {
@@ -92,8 +92,8 @@ label {
 }
 
 .image-detail {
-  width: 500px;
-  height: 495px;
+  max-width: 500px;
+  max-height: 495px;
 }
 /* ITEM */
 
@@ -102,6 +102,9 @@ label {
 .footer {
   background-color: rgba(71, 68, 68, 0.9);
   color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 /* ICONS */
@@ -114,6 +117,10 @@ label {
 .add-icon,
 .remove-icon:hover {
   cursor: pointer;
+}
+
+.dollar-icon {
+  color: green;
 }
 
 /* INPUTS */
