@@ -40,6 +40,7 @@ const ItemDetail = ({ item }) => {
         <h1 className="mt-2 spec-title">Especificaciones del producto</h1>
         {item.specs &&
           item.specs.map((spec) => <p className="spec-text">{spec}</p>)}
+        <Image src={item.detailedDesc} fluid />
       </div>
     </div>
   );
