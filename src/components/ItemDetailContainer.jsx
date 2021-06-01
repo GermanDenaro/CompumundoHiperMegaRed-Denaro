@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import ItemDetail from './ItemDetail'
 import { getFirestore } from '../firebase'
+import Spinner3 from './Spinner3'
 
 const ItemDetailContainer = () => {
 
@@ -20,9 +21,12 @@ const ItemDetailContainer = () => {
 
 
     return (
-              
-                <ItemDetail item={itemDetailedById}/>
-            
+          <>
+        {
+            itemDetailedById.length < 1 ? <Spinner3 vh='100'/> : <ItemDetail item={itemDetailedById}/>
+        }
+        
+        </>      
     )
 }
 

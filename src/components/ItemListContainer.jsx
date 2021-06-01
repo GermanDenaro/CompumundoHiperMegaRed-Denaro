@@ -4,6 +4,7 @@ import ItemList from './ItemList'
 import Spinner from './Spinner'
 import { useParams } from 'react-router'
 import { getFirestore } from '../firebase'
+import Spinner3 from './Spinner3'
 
 
 
@@ -38,7 +39,7 @@ const ItemListContainer = () => {
         </p>
       </Alert>
       {
-        items.length < 1 ? <Spinner vh='100'/> : <ItemList className='img-container' items={items}/>
+        items.length < 1 ? <Spinner3 vh='100'/> : <ItemList className='img-container' items={items}/>
       }
       
       
