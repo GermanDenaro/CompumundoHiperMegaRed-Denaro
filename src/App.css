@@ -91,6 +91,11 @@ label {
   color: black;
 }
 
+.col-image-detail {
+  display: block;
+  margin: auto;
+}
+
 .image-detail {
   max-width: 500px;
   max-height: 495px;
@@ -119,7 +124,6 @@ label {
 .footer {
   background-color: rgba(71, 68, 68, 0.9);
   color: white;
-  position: fixed;
   bottom: 0;
   width: 100%;
 }
@@ -151,4 +155,23 @@ label {
   align-items: center;
   margin-top: 6px;
   padding: 0;
+}
+
+/* CART */
+
+.img-product-cart {
+  width: 100%;
+  object-fit: scale-down;
+  height: 15vw;
+  border-bottom: solid 0.5px #dee2e6;
+}
+
+.car-img-scale {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.car-img-scale:not(:nth-child(6n)):not(:nth-child(12n)) {
+  border-right: solid 0.5px #dee2e6;
 }

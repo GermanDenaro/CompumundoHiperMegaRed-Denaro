@@ -22,12 +22,13 @@ const ItemDetail = ({ item }) => {
       <Row className="border border-dark rounded rounded-lg mb-3">
         <Col
           md={7}
-          className="mr-2 animate__animated animate__fadeInLeft animate__faster text-center"
+          className="mr-2 animate__animated animate__fadeInLeft animate__faster text-center col-image-detail"
         >
           <Image src={item.pictureUrl} fluid className="image-detail" />
         </Col>
         <Col className="animate__animated animate__fadeInRight animate__faster bg-light border-left border-dark rounded-right">
           <h1 className="text-center mt-3">{item.title}</h1>
+          <hr />
           <p>{item.extendedDesc}</p>
           <p className="text-center item-price">
             <AttachMoneyIcon fontSize="large" className="dollar-icon" />
