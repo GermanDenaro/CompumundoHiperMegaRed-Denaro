@@ -109,7 +109,7 @@ export default function Checkout() {
   };
 
   return (
-    <div className="container mt-3">
+    <div className="container mt-3 px-4">
       <Formik
         initialValues={{
           firstName: '',
@@ -131,8 +131,8 @@ export default function Checkout() {
       >
         {(formik) => (
           <div className="container">
-            <Form id="form">
-              <div className="row">
+            <Form id="form" className="bg-light rounded rounded-lg">
+              <div className="row mx-2">
                 <div className="col-4">
                   <TextField label="Nombre" name="firstName" type="text" />
                 </div>
@@ -144,7 +144,7 @@ export default function Checkout() {
                 </div>
               </div>
 
-              <div className="row">
+              <div className="row mx-2">
                 <div className="col-4">
                   <TextField label="Email" name="email" type="email" />
                 </div>
@@ -159,7 +159,8 @@ export default function Checkout() {
                   <TextField label="Teléfono" name="phone" type="number" />
                 </div>
               </div>
-              <div className="row">
+
+              <div className="row mx-2">
                 <div className="col-4">
                   <TextField label="Dirección" name="address" type="text" />
                 </div>
@@ -171,7 +172,7 @@ export default function Checkout() {
                 </div>
               </div>
 
-              <div className="row">
+              <div className="row mx-2">
                 <div className="col-6">
                   <TextField
                     label="Nombre en la tarjeta"
@@ -188,7 +189,7 @@ export default function Checkout() {
                 </div>
               </div>
 
-              <div className="row">
+              <div className="row mx-2 pb-3">
                 <div className="col-6">
                   <TextField
                     label="Fecha de vencimiento de la tarjeta"
@@ -200,18 +201,19 @@ export default function Checkout() {
                   <TextField label="CVV" name="cardCvv" type="number" />
                 </div>
               </div>
-
-              <Button variant="primary" type="submit" className="mt-4">
-                Pagar ${context.cartTotal}
-              </Button>
-              <Button
-                variant="warning"
-                type="submit"
-                className="ml-2 mt-4"
-                onClick={completarForm}
-              >
-                Completar Form
-              </Button>
+              <div className="text-center pb-3">
+                <Button variant="primary" type="submit">
+                  Pagar ${context.cartTotal}
+                </Button>
+                <Button
+                  variant="warning"
+                  type="submit"
+                  className="ml-2"
+                  onClick={completarForm}
+                >
+                  Completar Form
+                </Button>
+              </div>
             </Form>
           </div>
         )}

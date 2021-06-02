@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import jesus from '../Images/jesus.gif';
 
 const Spinner = () => {
-    return (
-        <div className="container">
-            <div class="kinetic"></div>
-        </div>
-    )
-}
+  return (
+    <div className="container text-center">
+      <img src={jesus} alt="jesus" />
+    </div>
+  );
+};
 
-export default Spinner
+export default Spinner;

@@ -34,7 +34,7 @@ const ItemCount = ({ items, onAdd }) => {
       {items.length === '0' ? (
         <Spinner />
       ) : (
-        <div className="container mt-3">
+        <div className="container mt-5">
           <div className="text-center float-right">
             <RemoveCircleOutlineIcon
               className="remove-icon"
@@ -72,9 +72,7 @@ const ItemCount = ({ items, onAdd }) => {
           </div>
           <div className="pt-5 text-center">
             <Link to="/cart">
-              <Button
-                className={`btn btn-dark mt-3 ${!finalizar ? 'd-none' : ''}`}
-              >
+              <Button className={`btn btn-dark ${!finalizar ? 'd-none' : ''}`}>
                 Finalizar Compra
               </Button>
             </Link>

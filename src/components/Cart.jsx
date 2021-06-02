@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { Button, Image, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 
 const Cart = () => {
   const context = useContext(CartContext);
@@ -30,9 +31,16 @@ const Cart = () => {
                   fluid
                   className="img-product-cart"
                 />
-                <p className="mt-2">{item.title}</p>                     
+                <p className="mt-2">{item.title}</p>
                 <p>Cantidad: {item.quantity}</p>
-                <p>Precio: ${item.price * item.quantity}</p>
+                <p>
+                  Precio:{' '}
+                  <AttachMoneyIcon
+                    fontSize="small"
+                    className="dollar-icon-cart"
+                  />
+                  {item.price * item.quantity}
+                </p>
                 <div>
                   <Button
                     className="btn btn-info mb-2 btn-eliminar"
@@ -45,9 +53,14 @@ const Cart = () => {
               </Col>
             ))}
           </Row>
-          <div className="text-center mt-5">
+
+          <div className="text-center mb-3">
             <p>Total de items: {context.cartItems}</p>
-            <p>Precio total: $ {context.cartTotal}</p>
+            <p>
+              Precio total:
+              <AttachMoneyIcon fontSize="small" className="dollar-icon-cart" />
+              {context.cartTotal}
+            </p>
             <Link to="/checkout">
               <Button className="btn btn-info" type="submit">
                 Ir al Checkout

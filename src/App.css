@@ -19,6 +19,10 @@ label {
 
 /* SPINNER */
 
+.jesus {
+  text-align: center;
+}
+
 .kinetic {
   height: 80px;
   width: 80px;
@@ -119,6 +123,20 @@ label {
 }
 /* ITEM */
 
+.card-item {
+  max-height: 500px;
+}
+
+.card-text {
+  max-height: 149.79px;
+}
+
+/* ITEM LIST CONAINER */
+
+.product-desc {
+  margin: 0;
+}
+
 /* FOOTER */
 
 .footer {
@@ -145,6 +163,11 @@ label {
   margin-bottom: 0.3rem;
 }
 
+.dollar-icon-cart {
+  color: green;
+  margin-bottom: 0.1rem;
+}
+
 /* INPUTS */
 .inputis {
   padding: 0;
@@ -155,6 +178,15 @@ label {
   align-items: center;
   margin-top: 6px;
   padding: 0;
+  cursor: default;
+}
+
+.stock-input:hover {
+  pointer-events: none;
+}
+
+.stock-input:focus {
+  outline: none;
 }
 
 /* CART */
