@@ -1,10 +1,11 @@
 import React from 'react';
 import King from '../Images/Logo.png';
+import { Image } from 'react-bootstrap';
 
 const Logo = () => {
   return (
-    <div>
-      <img src={King} alt="Logo" />
+    <div className="container">
+      <Image src={King} fluid alt="Logo" className="logo" />
     </div>
   );
 };

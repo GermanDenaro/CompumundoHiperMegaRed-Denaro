@@ -10,7 +10,7 @@ const Item = ({ item }) => {
       key={item.id}
     >
       <Card className="card-item border border-secondary">
-        <Link to={`/item/${item.id}`}>
+        <Link to={`/item/${item.id}`} style={{ textDecoration: 'none' }}>
           <Card.Img
             style={{ height: 180 }}
             className="img-card"

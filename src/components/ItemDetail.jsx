@@ -38,9 +38,7 @@ const ItemDetail = ({ item }) => {
         </Col>
       </Row>
       <hr className="my-4" />
-      <div>
-        {item.specs &&
-          item.specs.map((spec) => <p className="spec-text">{spec}</p>)}
+      <div className="text-center">
         <Image src={item.itemBanner} fluid />
       </div>
     </div>

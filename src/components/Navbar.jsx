@@ -7,7 +7,7 @@ import Logo from './Logo';
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-warning bg-gradient">
+      <nav className="navbar navbar-expand-lg navbar-light bg-navbar bg-gradient">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -36,7 +36,11 @@ const Navbar = () => {
                 </a>
               </li>
               <Dropdown>
-                <Dropdown.Toggle variant="warning" id="dropdown-basic">
+                <Dropdown.Toggle
+                  variant="warning"
+                  id="dropdown-basic"
+                  className="nav-dropdown"
+                >
                   Productos
                 </Dropdown.Toggle>
 
@@ -55,10 +59,12 @@ const Navbar = () => {
                 </Dropdown.Menu>
               </Dropdown>
             </ul>
-            <div>
-              <Logo />
+            <div className="d-flex justify-content-center">
               <Link to="/">
-                <a className="navbar-brand ml-5">CompumundoHiperMegaRed</a>
+                <Logo className="logo" />
+              </Link>
+              <Link to="/">
+                <a className="navbar-brand mt-1">CompumundoHiperMegaRed</a>
               </Link>
             </div>
             <form className="d-flex">
@@ -73,7 +79,7 @@ const Navbar = () => {
               </Button>
             </form>
           </div>
-          <Link to="/cart">
+          <Link to="/cart" style={{ textDecoration: 'none' }}>
             <CartWidget />
           </Link>
         </div>
