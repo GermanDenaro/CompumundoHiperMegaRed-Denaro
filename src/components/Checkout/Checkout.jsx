@@ -3,12 +3,13 @@ import { getFirestore } from '../../firebase';
 import 'firebase/firestore';
 import firebase from 'firebase/app';
 import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
+import { Button, Col, Row } from 'react-bootstrap';
 import { CartContext } from '../../context/CartContext';
 import Modal from 'react-bootstrap/Modal';
 import { Formik, Form } from 'formik';
 import TextField from './TextField';
 import * as Yup from 'yup';
+import { LinkedCameraOutlined } from '@material-ui/icons';
 
 export default function Checkout() {
   const validate = Yup.object({
@@ -201,18 +202,27 @@ export default function Checkout() {
                   <TextField label="CVV" name="cardCvv" type="number" />
                 </div>
               </div>
-              <div className="text-center pb-3">
-                <Button variant="primary" type="submit">
-                  Pagar ${context.cartTotal}
-                </Button>
-                <Button
+              <div className="text-center pb-3 justify-content-between">
+                <Row>
+                  <Col>
+                    <Button
+                      variant="info"
+                      type="submit"
+                      className="font-weight-bold"
+                    >
+                      Pagar ${context.cartTotal}
+                    </Button>
+                  </Col>
+
+                  {/* <Button
                   variant="warning"
                   type="submit"
                   className="ml-2"
                   onClick={completarForm}
                 >
                   Completar Form
-                </Button>
+                </Button> */}
+                </Row>
               </div>
             </Form>
           </div>
@@ -225,7 +235,7 @@ export default function Checkout() {
         backdrop="static"
         keyboard={false}
         centered
-        // className="animate__animated animate__fadeIn"
+        className="animate__animated animate__fadeIn"
       >
         <Modal.Body className="text-center">
           <h1 className="h1-home mt-3">Purchase completed!</h1>

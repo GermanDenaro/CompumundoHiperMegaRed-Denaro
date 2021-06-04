@@ -70,13 +70,13 @@ const Cart = () => {
         //   </div>
         // </div>
 
-        <div class="container mt-5 mb-5 bg-light">
+        <div class="container mt-5 mb-5 bg-light rounded rounded-large">
           <div class="d-flex justify-content-center row">
             <div class="col-md-12">
               <div class="p-2">
                 <h4>Shopping cart</h4>
               </div>
-              {context.cart.map((item) => (
+              {context.cart.map( item => (
                 <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded">
                   <div class="mr-1 cart-product-w">
                     <img
@@ -102,9 +102,9 @@ const Cart = () => {
                     </div>
                   </div>
                   <div class="d-flex flex-row align-items-center qty cart-product-w justify-content-center">
-                    <i class="fa fa-minus text-danger"></i>
-                    <h5 class="text-grey mt-1 mr-1 ml-1">{item.quantity}</h5>
-                    <i class="fa fa-plus text-success"></i>
+                    <h5 class="text-grey mt-1 mr-1 ml-1">
+                      Cantidad: {item.quantity}
+                    </h5>
                   </div>
                   <div>
                     <h5 className="mt-2 cart-price cart-product-w text-center">
@@ -136,9 +136,9 @@ const Cart = () => {
                   <strong>{context.cartTotal}</strong>
                 </p>
                 <Link to="/checkout" style={{ textDecoration: 'none' }}>
-                  <Button class="btn btn-info btn-block" type="submit">
-                    Checkout pitulin
-                  </Button>
+                  <button class="btn btn-block btn-info" type="submit">
+                    Checkout
+                  </button>
                 </Link>
               </div>
             </div>

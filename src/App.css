@@ -262,7 +262,7 @@ label {
 }
 
 .bg-navbar {
-  background-image: linear-gradient(to right, #ffc107, #f8dd8a);
+  background-image: linear-gradient(to right, #ffc107 60%, #f8dd8a);
 }
 
 .btn-icon-cart {
