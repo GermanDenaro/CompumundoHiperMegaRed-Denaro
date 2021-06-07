@@ -76,7 +76,7 @@ const Cart = () => {
               <div class="p-2">
                 <h4>Shopping cart</h4>
               </div>
-              {context.cart.map( item => (
+              {context.cart.map((item) => (
                 <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded">
                   <div class="mr-1 cart-product-w">
                     <img
@@ -90,7 +90,7 @@ const Cart = () => {
                     <span class="font-weight-bold text-center">
                       {item.title}
                     </span>
-                    <div class="d-flex flex-row product-desc">
+                    {/* <div class="d-flex flex-row product-desc">
                       <div class="size mr-1">
                         <span class="text-grey">Size:</span>
                         <span class="font-weight-bold">&nbsp;M</span>
@@ -99,7 +99,7 @@ const Cart = () => {
                         <span class="text-grey">Color:</span>
                         <span class="font-weight-bold">&nbsp;Grey</span>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                   <div class="d-flex flex-row align-items-center qty cart-product-w justify-content-center">
                     <h5 class="text-grey mt-1 mr-1 ml-1">

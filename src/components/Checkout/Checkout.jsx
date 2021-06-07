@@ -20,7 +20,7 @@ export default function Checkout() {
       .max(20, 'Debe contener 20 carácteres o menos')
       .required('El apellido es requerido'),
     id: Yup.string()
-      .max(15, 'Debe contener 15 carácteres o menos')
+      .max(8, 'Debe contener 8 carácteres o menos')
       .required('El documento es requerido'),
     email: Yup.string()
       .email('Email inválido')
@@ -32,7 +32,7 @@ export default function Checkout() {
       .max(15, 'Debe contener 15 carácteres o menos')
       .required('Requerido'),
     address: Yup.string()
-      .max(15, 'Debe contener 15 carácteres o menos')
+      .max(30, 'Debe contener 30 carácteres o menos')
       .required('Requerido'),
     city: Yup.string()
       .max(15, 'Debe contener 15 carácteres o menos')
@@ -44,13 +44,15 @@ export default function Checkout() {
       .max(15, 'Debe contener 15 carácteres o menos')
       .required('Requerido'),
     cardNumber: Yup.string()
-      .max(15, 'Debe contener 15 carácteres o menos')
+      .max(16, 'Debe contener exactamente 16 carácteres')
+      .min(16, 'Debe contener exactamente 16 carácteres')
       .required('Requerido'),
     cardExpiration: Yup.string()
-      .max(15, 'Debe contener 15 carácteres o menos')
+      .max(4, 'Debe contener 15 carácteres o menos')
       .required('Requerido'),
     cardCvv: Yup.string()
-      .max(15, 'Debe contener 15 carácteres o menos')
+      .max(3, 'Debe contener exactamente 3 números')
+      .min(3, 'Debe contener exactamente 3 números')
       .required('Requerido'),
   });
 
@@ -238,11 +240,13 @@ export default function Checkout() {
         className="animate__animated animate__fadeIn"
       >
         <Modal.Body className="text-center">
-          <h1 className="h1-home mt-3">Purchase completed!</h1>
-          <p className="mb-3">A confirmation has been sent to your email</p>
-          <p className="mb-3">Your order ID is: {orderId}</p>
+          <h1 className="h1-home mt-3">Compra Completada!</h1>
+          <p className="mb-3">
+            Te enviamos un mail con la confirmación de tu compra
+          </p>
+          <p className="mb-3">El ID de tu compra es: {orderId}</p>
           <Link to="/home">
-            <button className="btn btn-success px-4 py-2 mb-3">Home</button>
+            <button className="btn btn-success px-4 py-2 mb-3">Inicio</button>
           </Link>
         </Modal.Body>
       </Modal>

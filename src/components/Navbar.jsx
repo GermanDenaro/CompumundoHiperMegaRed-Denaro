@@ -46,19 +46,21 @@ const Navbar = () => {
 
                 <Dropdown.Menu>
                   <Link to="/category/all">
-                    <Dropdown.Item href="#/action-1">
-                      Todo
-                      </Dropdown.Item>
+                    <Dropdown.Item href="#/action-1">Todo</Dropdown.Item>
                   </Link>
                   <Link to="/category/consoles">
-                    <Dropdown.Item href="#/action-2">
-                      Consolas
-                    </Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">Consolas</Dropdown.Item>
                   </Link>
                   <Link to="/category/pc">
-                    <Dropdown.Item href="#/action-4">
+                    <Dropdown.Item href="#/action-3">
                       Computadoras Armadas
                     </Dropdown.Item>
+                  </Link>
+                  <Link to="/category/laptops">
+                    <Dropdown.Item href="#/action-4">Laptops</Dropdown.Item>
+                  </Link>
+                  <Link to="/category/various">
+                    <Dropdown.Item href="#/action-5">Varios</Dropdown.Item>
                   </Link>
                 </Dropdown.Menu>
               </Dropdown>

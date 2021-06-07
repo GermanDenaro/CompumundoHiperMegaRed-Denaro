@@ -30,6 +30,7 @@ const ItemDetail = ({ item }) => {
           <h1 className="mt-3">{item.title}</h1>
           <hr />
           <p>{item.extendedDesc}</p>
+          <hr />
           <p className="item-price">
             <AttachMoneyIcon fontSize="large" className="dollar-icon" />
             {item.price}
