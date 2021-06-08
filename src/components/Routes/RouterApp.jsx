@@ -30,6 +30,9 @@ const RouterApp = () => {
         <Route path="/sobreNosotros">
           <Nosotros />
         </Route>
+        <Route path="/">
+          <ItemListContainer />
+        </Route>
       </Switch>
     </Router>
   );

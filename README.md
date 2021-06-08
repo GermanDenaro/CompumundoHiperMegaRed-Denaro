@@ -46,24 +46,22 @@ CompumundoHyperMegaRed es una tienda virtual de venta de productos electrónicos
 
 ## Uso de la Pagina
 
-If your grandmother understands these instructions it means we did a great job!
-
 La lista de los productos.
-<img src="public/readme-itemList.jpg" alt="home">
+<img src="public/readme-list.jpg" alt="home">
 
-<img src="public/readme-itemList2.jpg" alt="shop">
+<img src="public/readme-list2.jpg" alt="shop">
 
 El item seleccionado en detalle. Clickeamos en agregar al carrito.
 <br />
 Si queremos seguir comprando, clickeamos en Volver y si ya terminamos, clickeamos en Finalizar Compra.
-<img src="public/readme-itemDetail.jpg" alt="cart">
+<img src="public/readme-detail.jpg" alt="cart">
 
 Este es tu carrito. Aqui veras todos los productos que agregaste, asi como su cantidad y su precio total.
 <br />
 Tambien, podes eliminar algun producto clickeando en el tacho rojo.
 <br />
 Si todo esta bien, clickeamos en Checkout
-<img src="public/readme-Cart.jpg" alt="other cart">
+<img src="public/readme-cart.jpg" alt="other cart">
 
 Aqui tenemos un formulario, el cual completaremos con nuestros datos.
 <br />
