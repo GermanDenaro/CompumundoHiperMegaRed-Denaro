@@ -6,6 +6,7 @@ import ItemDetailContainer from '../ItemDetailContainer';
 import Cart from '../Cart';
 import Checkout from '../Checkout/Checkout';
 import Nosotros from '../sobreNosotros';
+import Contacto from '../Contacto';
 
 const RouterApp = () => {
   return (
@@ -29,6 +30,9 @@ const RouterApp = () => {
         </Route>
         <Route path="/sobreNosotros">
           <Nosotros />
+        </Route>
+        <Route path="/contacto">
+          <Contacto />
         </Route>
         <Route path="/">
           <ItemListContainer />

@@ -207,6 +207,18 @@ label {
   margin-bottom: 0.1rem;
 }
 
+.facebook-icon {
+  color: #0673e7;
+}
+
+.instagram-icon {
+  color: #a12ba5;
+}
+
+.twitter-icon {
+  color: #1da1f2;
+}
+
 /* INPUTS */
 .inputis {
   padding: 0;

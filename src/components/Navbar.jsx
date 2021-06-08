@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dropdown, Button } from 'react-bootstrap';
+import { Dropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import CartWidget from './CartWidget';
 import Logo from './Logo';
@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-navbar bg-gradient">
-        <div className="container-fluid">
+        <div className="container-fluid container">
           <button
             className="navbar-toggler"
             type="button"
@@ -31,7 +31,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <a className="nav-link" href="/contacto">
                   Contacto
                 </a>
               </li>
@@ -73,17 +73,6 @@ const Navbar = () => {
                 <a className="navbar-brand mt-1">CompumundoHiperMegaRed</a>
               </Link>
             </div>
-            {/* <form className="d-flex">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <Button className="btn btn-info" type="submit">
-                Search
-              </Button>
-            </form> */}
             <Link to="/cart" style={{ textDecoration: 'none' }}>
               <CartWidget />
             </Link>

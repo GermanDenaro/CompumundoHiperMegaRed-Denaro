@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Alert } from 'react-bootstrap';
 import ItemList from './ItemList';
 import { useParams } from 'react-router';
 import { getFirestore } from '../firebase';
@@ -27,13 +26,6 @@ const ItemListContainer = () => {
 
   return (
     <div>
-      {/* <Alert variant="success">
-        <Alert.Heading className="text-center">Bienvenidos!</Alert.Heading>
-        <p className="text-center">
-          En nuestra tienda podras encontrar todo lo que buscas! Y lo mejor, a
-          un precio inimaginable!
-        </p>
-      </Alert> */}
       {items.length < 1 ? (
         <Spinner vh="100" className="jesus" />
       ) : (

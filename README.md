@@ -5,7 +5,7 @@
     <img src="public/readme-banner.jpg" alt="Logo">
   </a>
 
-  <h3 align="center">CompumundoHyperMegaRed</h3>
+  <h3 align="center">CompumundoHiperMegaRed</h3>
 
   <p align="center">
     La mejor calidad, al mejor precio.
