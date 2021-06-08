@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="#">
+    <img src="" alt="Logo">
+  </a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h3 align="center">CompumundoHyperMegaRed</h3>
 
-## Available Scripts
+  <p align="center">
+    La mejor calidad, al mejor precio.
+    <br />
+    <a href="https://github.com/GermanDenaro/CompumundoHiperMegaRed-Denaro/blob/main/README.md"><strong>Ver el documento »</strong></a>
+    <br />
+    
+  </p>
+</p>
 
-In the project directory, you can run:
+<!-- ABOUT THE PROJECT -->
 
-### `yarn start`
+## Sobre el proyecto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Este es mi proyecto final para el curso de ReactJs de [CoderHouse](https://www.coderhouse.com/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+CompumundoHyperMegaRed es una tienda virtual de venta de productos electrónicos. Recibimos importaciones de los paises mas influyentes del mundo, para asegurar la calidad y felicidad de nuestros clientes.
 
-### `yarn test`
+### Hecho con:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [React](https://reactjs.org/)
+- [Bootstrap](https://getbootstrap.com)
+- [React-Bootstrap](https://react-bootstrap.github.io/)
+- [Formik](https://formik.org/)
+- [MaterialUi-Icons](https://material-ui.com/es/components/material-icons/)
 
-### `yarn build`
+<!-- GETTING STARTED -->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Empecemos!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### requisitos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ```sh
+  Ganas de probar mi pagina.
+  ```
 
-### `yarn eject`
+<!-- USAGE EXAMPLES -->
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Uso de la Pagina
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If your grandmother understands these instructions it means we did a great job!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+La lista de los productos.
+<img src="public/readme-itemList.jpg" alt="home">
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<img src="public/readme-itemList2.jpg" alt="shop">
 
-## Learn More
+El item seleccionado en detalle. Clickeamos en agregar al carrito.
+<br />
+Si queremos seguir comprando, clickeamos en Volver y si ya terminamos, clickeamos en Finalizar Compra.
+<img src="public/readme-itemDetail.jpg" alt="cart">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Este es tu carrito. Aqui veras todos los productos que agregaste, asi como su cantidad y su precio total.
+<br />
+Tambien, podes eliminar algun producto clickeando en el tacho rojo.
+<br />
+Si todo esta bien, clickeamos en Checkout
+<img src="public/readme-Cart.jpg" alt="other cart">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Aqui tenemos un formulario, el cual completaremos con nuestros datos.
+<br />
+Al terminar, clickearemos en Pagar.
+<img src="public/readme-checkout.jpg" alt="item ">
 
-### Code Splitting
+Y listo! Revisa tu E-mail para tu confirmación!
+<img src="public/readme-completed" alt="item detailed">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<!-- LICENSE -->
 
-### Analyzing the Bundle Size
+## Licencia
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Sientanse libre de hacer lo que quieran con este proyecto.
 
-### Making a Progressive Web App
+<!-- CONTACT -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contacto
 
-### Advanced Configuration
+Germán Denaro - [LinkedIn](https://www.linkedin.com/in/germandenaro/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Link del Proyecto: [https://github.com/GermanDenaro/CompumundoHiperMegaRed-Denaro](https://github.com/GermanDenaro/CompumundoHiperMegaRed-Denaro)
 
-### Deployment
+<!-- ACKNOWLEDGEMENTS -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Gracias a:
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [MercadoLibre](https://www.mercadolibre.com.ar/)
+- [Animate.css](https://daneden.github.io/animate.css)
+- [Google Fonts](https://fonts.google.com/)

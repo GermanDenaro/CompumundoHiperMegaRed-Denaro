@@ -48,7 +48,11 @@ export default function Checkout() {
       .min(16, 'Debe contener exactamente 16 carácteres')
       .required('Requerido'),
     cardExpiration: Yup.string()
-      .max(4, 'Debe contener 15 carácteres o menos')
+      .max(4, 'Debe contener 4 digitos')
+      .min(4, 'Debe contener 4 digitos')
+      .required('Requerido'),
+    cardMonthExpiration: Yup.string()
+      .max(2, 'Debe contener 2 digitos')
       .required('Requerido'),
     cardCvv: Yup.string()
       .max(3, 'Debe contener exactamente 3 números')
@@ -93,24 +97,6 @@ export default function Checkout() {
     });
   }
 
-  const completarForm = (e) => {
-    e.preventDefault();
-    const form = document.getElementById('form');
-    form.elements['firstName'].value = 'Homero';
-    form.elements['lastName'].value = 'Simpson';
-    form.elements['id'].value = '15274854';
-    form.elements['email'].value = 'homero@prueba.com';
-    form.elements['emailConf'].value = 'homero@prueba.com';
-    form.elements['phone'].value = '1124569800';
-    form.elements['address'].value = 'Av. Siempreviva 123';
-    form.elements['city'].value = 'Springfield';
-    form.elements['zip'].value = '1234';
-    form.elements['cardName'].value = 'Homero J Simpson';
-    form.elements['cardNumber'].value = '1111222233334444';
-    form.elements['cardExpiration'].value = '09/29';
-    form.elements['cardCvv'].value = '456';
-  };
-
   return (
     <div className="container mt-3 px-4">
       <Formik
@@ -127,6 +113,7 @@ export default function Checkout() {
           cardName: '',
           cardNumber: '',
           cardExpiration: '',
+          cardMonthExpiration: '',
           cardCvv: '',
         }}
         validationSchema={validate}
@@ -193,11 +180,18 @@ export default function Checkout() {
               </div>
 
               <div className="row mx-2 pb-3">
-                <div className="col-6">
+                <div className="col-3">
                   <TextField
-                    label="Fecha de vencimiento de la tarjeta"
+                    label="Mes de vencimiento de la tarjeta"
+                    name="cardMonthExpiration"
+                    type="number"
+                  />
+                </div>
+                <div className="col-3">
+                  <TextField
+                    label="Año de vencimiento de la tarjeta"
                     name="cardExpiration"
-                    type="text"
+                    type="number"
                   />
                 </div>
                 <div className="col-6">

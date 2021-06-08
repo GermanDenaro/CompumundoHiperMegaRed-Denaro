@@ -5,7 +5,7 @@ import ItemListContainer from '../ItemListContainer';
 import ItemDetailContainer from '../ItemDetailContainer';
 import Cart from '../Cart';
 import Checkout from '../Checkout/Checkout';
-import Footer from '../Footer';
+import Nosotros from '../sobreNosotros';
 
 const RouterApp = () => {
   return (
@@ -27,11 +27,10 @@ const RouterApp = () => {
         <Route path="/checkout">
           <Checkout />
         </Route>
-        <Route path="/">
-          <ItemListContainer />
+        <Route path="/sobreNosotros">
+          <Nosotros />
         </Route>
       </Switch>
-      {/* <Footer/> */}
     </Router>
   );
 };

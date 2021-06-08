@@ -73,8 +73,8 @@ const Cart = () => {
         <div class="container mt-5 mb-5 bg-light rounded rounded-large">
           <div class="d-flex justify-content-center row">
             <div class="col-md-12">
-              <div class="p-2">
-                <h4>Shopping cart</h4>
+              <div class="my-4 text-center">
+                <h4>Carrito</h4>
               </div>
               {context.cart.map((item) => (
                 <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded">

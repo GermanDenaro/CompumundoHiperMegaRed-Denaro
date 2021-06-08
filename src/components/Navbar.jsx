@@ -26,7 +26,7 @@ const Navbar = () => {
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <a className="nav-link" href="/sobreNosotros">
                   Quienes somos?
                 </a>
               </li>
@@ -65,7 +65,7 @@ const Navbar = () => {
                 </Dropdown.Menu>
               </Dropdown>
             </ul>
-            <div className="d-flex justify-content-center">
+            <div className="d-flex mr-5 pr-5">
               <Link to="/">
                 <Logo className="logo" />
               </Link>
@@ -73,7 +73,7 @@ const Navbar = () => {
                 <a className="navbar-brand mt-1">CompumundoHiperMegaRed</a>
               </Link>
             </div>
-            <form className="d-flex">
+            {/* <form className="d-flex">
               <input
                 className="form-control me-2"
                 type="search"
@@ -83,11 +83,11 @@ const Navbar = () => {
               <Button className="btn btn-info" type="submit">
                 Search
               </Button>
-            </form>
+            </form> */}
+            <Link to="/cart" style={{ textDecoration: 'none' }}>
+              <CartWidget />
+            </Link>
           </div>
-          <Link to="/cart" style={{ textDecoration: 'none' }}>
-            <CartWidget />
-          </Link>
         </div>
       </nav>
     </>

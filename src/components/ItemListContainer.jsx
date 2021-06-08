@@ -27,13 +27,13 @@ const ItemListContainer = () => {
 
   return (
     <div>
-      <Alert variant="success">
+      {/* <Alert variant="success">
         <Alert.Heading className="text-center">Bienvenidos!</Alert.Heading>
         <p className="text-center">
           En nuestra tienda podras encontrar todo lo que buscas! Y lo mejor, a
           un precio inimaginable!
         </p>
-      </Alert>
+      </Alert> */}
       {items.length < 1 ? (
         <Spinner vh="100" className="jesus" />
       ) : (
