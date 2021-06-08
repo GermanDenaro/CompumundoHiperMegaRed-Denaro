@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="#">
-    <img src="" alt="Logo">
+    <img src="public/readme-banner.jpg" alt="Logo">
   </a>
 
   <h3 align="center">CompumundoHyperMegaRed</h3>
@@ -54,7 +54,7 @@ La lista de los productos.
 
 El item seleccionado en detalle. Clickeamos en agregar al carrito.
 <br />
-Si queremos seguir comprando, clickeamos en Volver y si ya terminamos, clickeamos en Finalizar Compra.
+Si queremos seguir comprando, clickeamos en Volver y si ya terminamos, clickeamos en Finalizar Compra (sale despues de clickear en agregar carrito).
 <img src="public/readme-detail.jpg" alt="detail">
 
 Este es tu carrito. Aqui veras todos los productos que agregaste, asi como su cantidad y su precio total.
@@ -70,7 +70,7 @@ Al terminar, clickearemos en Pagar.
 <img src="public/readme-checkout.jpg" alt="checkout">
 
 Y listo! Revisa tu E-mail para tu confirmación!
-<img src="public/readme-completed" alt="completed">
+<img src="public/readme-completed.jpg" alt="completed">
 
 </div>
 <!-- LICENSE -->
