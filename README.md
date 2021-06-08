@@ -46,6 +46,7 @@ CompumundoHyperMegaRed es una tienda virtual de venta de productos electrónicos
 
 ## Uso de la Pagina
 
+<div align='center'>
 La lista de los productos.
 <img src="public/readme-list.jpg" alt="list">
 
@@ -71,6 +72,7 @@ Al terminar, clickearemos en Pagar.
 Y listo! Revisa tu E-mail para tu confirmación!
 <img src="public/readme-completed" alt="completed">
 
+</div>
 <!-- LICENSE -->
 
 ## Licencia
