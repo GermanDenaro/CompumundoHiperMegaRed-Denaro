@@ -10,12 +10,9 @@ const ItemList = ({ items }) => {
   let catItems = [];
 
   useEffect(() => {
-    console.log('entrando useeffect. cat es', id);
     if (id === undefined) {
-      console.log('seteamos id en all');
       setCategory('all');
     } else {
-      console.log('seteamos cat en', id);
       setCategory(id);
     }
   }, [id]);

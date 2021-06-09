@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import ItemList from './ItemList';
-import { useParams } from 'react-router';
 import { getFirestore } from '../firebase';
 import Spinner from './Spinner';
 
 const ItemListContainer = () => {
-  const { id } = useParams();
-  // console.log('El id es: ', id);
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -29,7 +26,6 @@ const ItemListContainer = () => {
       {items.length < 1 ? (
         <Spinner vh="100" className="jesus" />
       ) : (
-        // <Spinner3 vh="100" />
         <ItemList className="img-container" items={items} />
       )}
     </div>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router';
 import { Image, Col, Row } from 'react-bootstrap';
 import ItemCount from './ItemCount';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
@@ -8,14 +7,10 @@ const ItemDetail = ({ item }) => {
   const [itemQty, setItemQty] = useState(0);
 
   const onAdd = (qty) => {
-    console.log('Dentro de onadd');
     setItemQty(qty);
   };
 
-  const { id } = useParams();
 
-  // const itemDetailed = products.filter(item => item.id == id)
-  // console.log(itemDetailed);
 
   return (
     <div className="container mt-4 animate__animated animate__fadeIn pb-5">

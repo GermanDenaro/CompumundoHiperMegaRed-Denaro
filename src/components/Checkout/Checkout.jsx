@@ -9,7 +9,6 @@ import Modal from 'react-bootstrap/Modal';
 import { Formik, Form } from 'formik';
 import TextField from './TextField';
 import * as Yup from 'yup';
-import { LinkedCameraOutlined } from '@material-ui/icons';
 
 export default function Checkout() {
   const validate = Yup.object({
@@ -70,8 +69,6 @@ export default function Checkout() {
   const db = getFirestore();
 
   function generarOrden(e) {
-    console.log('Generando Orden');
-    const form = document.getElementById('form');
     const newOrder = {
       buyer: {
         firstName: e.firstName,
@@ -209,15 +206,6 @@ export default function Checkout() {
                       Pagar ${context.cartTotal}
                     </Button>
                   </Col>
-
-                  {/* <Button
-                  variant="warning"
-                  type="submit"
-                  className="ml-2"
-                  onClick={completarForm}
-                >
-                  Completar Form
-                </Button> */}
                 </Row>
               </div>
             </Form>

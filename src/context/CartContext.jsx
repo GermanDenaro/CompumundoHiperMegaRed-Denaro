@@ -32,8 +32,6 @@ export const CartProvider = ({children}) => {
     }
   
     const addItem = (id, quantity, price, title, pictureUrl) => {
-      console.log('llamando additem');
-      console.log('se recibio', id, 'con cantidad', quantity, 'llamado: ', title, 'con foto: ', pictureUrl, 'costando: ', price);
       const isIn = isInCart(id);
       isIn 
         ? setCart(cart.map(item => item.id === id ? {...item, quantity: quantity}: item)) 

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
-import { Button, Image, Row, Col } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 import Trash from '@material-ui/icons/DeleteForever';
@@ -20,55 +20,6 @@ const Cart = () => {
           </Link>
         </div>
       ) : (
-        // <div>
-        //   <Row>
-        //     {context.cart.map((item) => (
-        //       <Col
-        //         md={2}
-        //         className="text-center mb-4 border-bottom car-img-scale"
-        //       >
-        //         <Image
-        //           src={item.pictureUrl}
-        //           fluid
-        //           className="img-product-cart"
-        //         />
-        //         <p className="mt-2">{item.title}</p>
-        //         <p>Cantidad: {item.quantity}</p>
-        //         <p>
-        //           Precio:{' '}
-        //           <AttachMoneyIcon
-        //             fontSize="small"
-        //             className="dollar-icon-cart"
-        //           />
-        //           {item.price * item.quantity}
-        //         </p>
-        //         <div>
-        //           <Button
-        //             className="btn btn-info mb-2 btn-eliminar"
-        //             type="submit"
-        //             onClick={() => context.removeItem(item.id)}
-        //           >
-        //             Eliminar
-        //           </Button>
-        //         </div>
-        //       </Col>
-        //     ))}
-        //   </Row>
-
-        //   <div className="text-center mb-3">
-        //     <p>Total de items: {context.cartItems}</p>
-        //     <p>
-        //       Precio total:
-        //       <AttachMoneyIcon fontSize="small" className="dollar-icon-cart" />
-        //       {context.cartTotal}
-        //     </p>
-        //     <Link to="/checkout">
-        //       <Button className="btn btn-info" type="submit">
-        //         Ir al Checkout
-        //       </Button>
-        //     </Link>
-        //   </div>
-        // </div>
 
         <div class="container mt-5 mb-5 bg-light rounded rounded-large">
           <div class="d-flex justify-content-center row">
@@ -90,16 +41,6 @@ const Cart = () => {
                     <span class="font-weight-bold text-center">
                       {item.title}
                     </span>
-                    {/* <div class="d-flex flex-row product-desc">
-                      <div class="size mr-1">
-                        <span class="text-grey">Size:</span>
-                        <span class="font-weight-bold">&nbsp;M</span>
-                      </div>
-                      <div class="color">
-                        <span class="text-grey">Color:</span>
-                        <span class="font-weight-bold">&nbsp;Grey</span>
-                      </div>
-                    </div> */}
                   </div>
                   <div class="d-flex flex-row align-items-center qty cart-product-w justify-content-center">
                     <h5 class="text-grey mt-1 mr-1 ml-1">
